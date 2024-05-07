@@ -20,6 +20,7 @@ a{
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #f9ffff;
+  
 }
 
 nav{
@@ -77,6 +78,21 @@ nav{
 .btn:hover{
     background-color: #1e40af;
 }
+
+.show-popup{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1d4ed8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.show-popup:hover{
+    background-color: #1e40af;
+}
+
 
 .container{
     max-width: 1200px;
@@ -313,6 +329,7 @@ section.header{
     color: #fff;
     background-color: #1d4ed8;
     border: 2px solid dark;
+    margin-bottom: 1rem;
 }
 
 .projects .card button:hover{
@@ -320,6 +337,72 @@ section.header{
     border-color: #383e42;
 
 }
+
+
+
+.projects .popup-container{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.projects .popup-container.active{
+    opacity: 1;
+    pointer-events: auto;
+    transition: .4s ease;
+    justify-content: center;
+    align-items:center;
+
+}
+
+.projects .popup-container .popup-box{
+    width:500px;
+    background-color: #f2f2f2;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    padding: 30px;
+    transform: scale(0);
+}
+
+.projects .popup-container.active .popup-box
+{
+    transform: scale(1);
+    transition: .4s ease;
+    transition-delay: .25s;
+}
+
+.projects .popup-box h1{
+    color:#333;
+    line-height: 1;
+}
+
+.projects .popup-box p{
+    color:#333;
+    margin: 12px 0 20px;
+}
+
+.projects .popup-box .close-btn{
+    width: 100%;
+    height: 45px;
+    background: #6e78ff;
+    border-radius:6px;
+    border: none;
+    outline:none;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 18px;
+    color:#f2f2f2;
+    font-weight:500;
+}
+
 
 footer{
     position: relative;
