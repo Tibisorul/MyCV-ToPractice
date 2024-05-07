@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9ffff;
+}
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo{
+    max-width: 200px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: dark;
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d4ed8;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after{
+    width: 70%;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1d4ed8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #1e40af;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2 rem;
+}
+
+.blur{
+    position: static;
+    box-shadow: 0 0 1000px 50px #1d4ed8;
+    z-index: -100;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    align-items:center;
+    gap:2rem;
+}
+
+div.image img{
+    border-radius:10px;
+}
+
+.container .content p{
+    color: lightslategray;
+}
+
+header .content h4{
+    margin-bottom: 1rem;
+    color: #1e40af;
+    font-size:1rem;
+    font-weight:600;
+}
+
+header .content h1{
+    color:#1d4ed8;
+    margin-bottom: 1rem;
+    font-size:3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke:1px #1d4ed8;
+}
+
+header .content p{
+    margin-bottom: 2rem;
+    color: black;
+}
+
+header .image{
+    position: relative;
+}
+
+
+header .image img{
+    max-width: 600px;
+    margin: auto;
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+h2.header{
+    color: #1d4ed8;
+}
+
+
+section.header{
+    margin-bottom: 1rem;
+    color: #1d4ed8;
+    text-align: center;
+    font-size:2.25rem;
+    font-weight:600;
+}
+
+.education h4{
+    margin-bottom: 1rem;
+}
+
+.education{
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.degree-period{
+    display: flex;
+    justify-content: space-between; 
+    align-items: baseline; 
+}
+
+.degree-period h3{
+    font-weight: 2000;
+    font-size: 2rem;
+    color: #383e42;
+}
+
+.degree-period p{
+    color: lightslategray;
+}
+
+.education h4{
+    color: #ccc;
+    justify-content: center;
+}
+
+.soft-skills i{
+    color: #007BFF;   /* Schimbă culoarea tuturor iconițelor */
+    font-size: 24px;  /* Mărește dimensiunea tuturor iconițelor */
+    margin-right: 5px; /* Adaugă un spațiu între iconiță și text */
+}
+
+.soft-skills p{
+    color: lightslategray;
+    margin-bottom: 1rem;
+}
+
+.soft-skills .icons{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.skills{
+    margin-top:2rem;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.skills .card{
+    background-color: #383e42;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.skills .card:hover{
+    background-color: lightslategray;
+    border-color: dark;
+    border: 2px solid #1e1e1e;
+}
+
+.skills .card h4{
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px dashed #1e1e1e;
+}
+
+.skills .card p{
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+
+.sub-header{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: dark;
+}
+
+.projects{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom:8rem;
+}
+
+.projects .card{
+    padding: 3rem 2rem;
+    background-color: #383e42;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.projects .card:hover{
+    background-color: lightslategray;
+    border-color: black;
+}
+
+.projects .card .content{
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.projects .card h4{
+    margin-bottom: 1rem;
+    color:#fff;
+    font-size:1.2rem;
+    font-weight: 500;
+}
+
+.projects .card h3{
+    color:#fff;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 2px dashed black;
+}
+
+.projects .card p{
+    color: #fff;
+    margin-bottom:0.75rem;
+}
+
+.projects .card p{
+    color:#ccc;
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+}
+
+.projects .card button{
+    color: #fff;
+    background-color: #1d4ed8;
+    border: 2px solid dark;
+}
+
+.projects .card button:hover{
+    background-color: #1e40af;
+    border-color: #383e42;
+
+}
+
+footer{
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3,1fr);
+    gap:2rem;
+}
+
+
+
+footer .column .logo{
+    max-width: 100px;
+    margin-bottom: 2rem;
+}
+
+footer .column p{
+    color:lightslategray;
+    margin-bottom: 2rem;
+}
+
+footer .column .socials{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+
+footer .column .socials a{
+    color:dark;
+    border: 1px solid lightslategray;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover{
+    color:#fff;
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+footer .column h4{
+    color: #1d4ed8;
+    margin-bottom:2rem;
+    font-size: 1.2rem;
+    font-weight:500;
+}
+
+footer .column > a{
+    display:block;
+    color: lightslategray;
+    margin-bottom:1rem;
+    transition: all 0.3s ease;
+}
+
+footer .column > a:hover{
+    color:#ccc;
+}
+
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #1d4ed8;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+@media (width < 900px)
+{
+    .nav-links
+    {
+        display:none;
+    }
+    header{
+        grid-template-columns: repeat(1,1fr);
+    }
+    header .image{
+        grid-area:1/1/2/2;
+    }
+    .skills{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .projects{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    footer{
+        grid-template-columns: 1fr 200px;
+    }
+}
+
+
+@media (width < 600px){
+    header .image::before{
+        display: none;
+    }
+
+    .features{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pricing{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer{
+        grid-template-columns: 1fr 150px;
+    }
+}
